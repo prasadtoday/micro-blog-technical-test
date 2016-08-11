@@ -1,33 +1,71 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Micro Blog</title>
-
-    <!--
-     - Include you stylesheets and javascripts in here
-     - Load from /assets/javascripts and /assets/stylesheets  
-     - Try to avoid inline javascript and css if you can
-    -->
-
+   {% include 'headfiles.html' %}
   </head>
-  <body>
-    <h1>Micro Blog</h1>
-
-    <!--
-      TODO: Build the front-end for the micro-blog using a front-end framework
-            of your choice.
-
-            Suggested approach:
-            - Use jquery to make ajax requests to the API endpoints in src/index.php
-            - Use the Bootstrap front-end framework for css and any of the js
-              components it includes as you see fit
-                - In particular Bootstrap's grid system for layout
-
-      OPTIONAL: You may make use of any extra features of the TWIG template engine
-                if you wish (see: http://twig.sensiolabs.org/)
-
-    -->
-
-
+  <body>  
+    <div class="container">	  	
+	  <div id="" class="maindiv">   
+      {% include 'header.html' %}    
+            <div class="row" style="padding:inherit;">					
+                <div class="col-sm-12 col-xs-12 col-md-12 gotoapplication" id="top-heading"> 
+						 <b><a href="{{path.baseUrlPath}}api/dashboard">Click here to go in application panel</a></b>                        
+                </div>
+            </div>
+            <div class="row" style="padding:inherit;">					
+                <div class="col-sm-12 col-xs-12 col-md-12 text-left requirmentheading"> 
+						The requirements of the Application:  <br /><br />                        
+                        <ul>       
+                            <li>User Listing </li>
+                            <li>Listing blog posts </li>
+                            <li>Viewing an individual blog post </li>
+                            <li>Creating a small simple blog post </li>
+                            <li>Updating a small simple blog post </li>
+                            <li>Deleting a small simple blog post </li>
+                        </ul>                                                
+                </div>						
+            </div>
+            
+  		  <div class="row platformused">		
+					
+					<div class="col-sm-4 col-xs-12 col-md-4"> 						
+						
+						<div class="row">	
+							Platform Used	<br /><br />                            
+                            <ul>                        
+                                <li>PHP</li>
+                                <li>SQLite DB</li>
+                                <li>jQuery</li>
+                                <li>Html-CSS</li>
+                                <li>Bootstrap</li>                           
+                            </ul>                              
+                        </div>	
+					</div>	
+                    
+                    <div class="col-sm-4 col-xs-12 col-md-4"> 								
+						<div class="row">	
+							Tested In <br /><br />                            
+                            <ul>                        
+                                <li>Mozilla</li>
+                                <li>IE</li>
+                                <li>Google Chrome</li>
+                                <li>iPhone Devices</li>
+                                <li>iPad</li>   
+                                <li>Galaxy Devices</li>   
+                                <li>Nexus Devices</li>                           
+                            </ul>                              
+                        </div>	
+					</div>				
+								
+			    	<div class="col-sm-4 col-xs-12 col-md-4"> 	
+						<div class="row">	
+						Developed By: Prasad Patil	                      
+                        </div>
+					</div>
+									
+		  </div>
+           {% include 'footer.html' %}
+	  </div>
+	</div>
   </body>
 </html>
