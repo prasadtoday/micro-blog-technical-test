@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'headfiles.html' %}
+    <script src="{{path.dirpath}}/src/js/jquery.min.js"></script>
+    <script src="{{path.dirpath}}/src/js/validations.js"></script>  
+  </head>
+  <body>  
+    <div class="container">	  	
+	  <div id="" class="maindiv">   
+      {% include 'header.html' %}    
+           
+           <div class="row addpost">
+					 <div class="col-sm-12 col-xs-12 col-md-12 text-left"> 						
+					       	<div class="row">	
+                               
+                                <div class="form-group">
+                                		<label for="" class="col-sm-12 col-xs-12 col-md-12 control-label addpostlable">Add New Post</label>                                		
+                               	</div>
+                                <form class="form-horizontal" role="form" method="post" action="{{path.baseUrlPath}}api/posts/new">
+                                <input type="hidden" class="form-control" id="user_id" name="user_id" placeholder="" value="{{post.user_id}}">
+                                
+                                    <div class="form-group">
+                                        <label for="name" class="col-sm-2 col-xs-2 col-md-2 control-label"></label>
+                                		<div id="errMsg" class="col-sm-10 col-xs-10 col-md-10" style="text-align: left; color:red;"></div>                                		
+                                	</div>
+                                    
+                                	<div class="form-group">
+                                		<label for="name" class="col-sm-2 control-label">Post Title* <br /> <font size="2">(Max length: 100)</font></label>
+                                		<div class="col-sm-10">
+                                			<input type="text" class="form-control" id="title" name="title" placeholder="" value="{{post.title}}" maxlength="100">
+                                		</div>
+                                	</div>
+                                	<div class="form-group">
+                                		<label for="message" class="col-sm-2 control-label">Post Description* <br /> <font size="2">(Max length: 700)</font></label>
+                                		<div class="col-sm-10">
+                                			<textarea class="form-control" rows="8" id="content" name="content" maxlength="700">{{post.content}}</textarea>
+                                		</div>
+                                	</div>
+                                	<div class="form-group">
+                                		<div class="col-sm-10 col-sm-offset-2">
+                                			<input id="submit" name="submit" type="submit" value="Submit" class="btn btn-primary"/>
+                                           &nbsp; <a href="{{path.baseUrlPath}}api/posts/user/{{post.user_id}}">Cancel</a>
+                                		</div>                                       
+                                	</div>                                	
+                                </form>       
+                            </div>                            
+			         </div>	                                         			
+		  </div>         
+          
+          {% include 'footer.html' %}
+	  </div>
+	</div>
+  </body>
+</html>

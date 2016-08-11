@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'headfiles.html' %}
+  </head>
+  <body>  
+    <div class="container">	  	
+	  <div id="" class="maindiv">   
+      {% include 'header.html' %}    
+           
+             <div class="row postdetailheading">
+                    <div class="col-sm-12 col-xs-12 col-md-12">
+						<div class="row">	
+							All Post(s)
+                            </div>	
+					</div>				
+            </div>
+            
+            <div class="row postdetailmenu">
+               		<div class="col-sm-8 col-xs-8 col-md-10">
+						<div class="row">	<a href="{{path.baseUrlPath}}api/dashboard"> << Back </a></div>	
+					</div>
+            </div>
+            
+          {% if(posts) %}
+          
+          {% for post in posts %} 
+  		  <div class="row dypostrecord">
+					 <div class="col-sm-12 col-xs-12 col-md-12 text-left"> 						
+					       	<div class="row"><b>{{ post.title|e }}</b></div>                            
+			         </div>	                                         			
+		  </div>
+          <div class="row dypostrecord">
+					 <div class="col-sm-12 col-xs-12 col-md-12 text-left"> 						
+					       	<div class="row">	{{ post.content}} ... </div>                            
+			         </div>			
+		  </div>
+          <div class="row dypostrecord">
+					 <div class="col-sm-12 col-xs-12 col-md-12 postdatealign"> 						
+					       	<div class="row"><b>{{ post.date|date("d M Y")}}</b></div>                            
+			         </div>			
+		  </div>
+          <div class="row dypostrecord">
+					 <div class="col-sm-12 col-xs-12 col-md-12 "> <div class="row"><hr /></div> </div>			
+		  </div>
+          
+          {% endfor %}
+          
+          {% else %}
+          
+          <div class="row" style="padding:inherit; margin: 1px; margin-top: 20px; margin-bottom: 20px;" >					
+					 <div class="col-sm-12 col-xs-12 col-md-12 text-left"> 						
+					       	<div class="row"> Post records not found.</div>                            
+			         </div>	
+          </div>
+            
+           {% endif %}
+          
+          {% include 'footer.html' %}
+	  </div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'headfiles.html' %}
+    <script src="{{path.dirpath}}/src/js/jquery.min.js"></script>
+    <script src="{{path.dirpath}}/src/js/postdelete.js"></script>   
+  </head>
+  <body>  
+  <input type="hidden" value="{{post.user_id}}" id="userId"/>
+  <input type="hidden" value="{{post.rowid}}" id="postId"/>
+  <input type="hidden" value="{{path.baseUrlPath}}api/posts/delete/{{post.rowid}}" id="deletepostapiurl"/>
+  <input type="hidden" value="{{path.baseUrlPath}}api/posts/user/{{post.user_id}}" id="redirctposturl"/>
+    <div class="container">	  	
+	  <div id="" class="maindiv">
+      {% include 'header.html' %}    
+           
+            <div class="row postdetailheading">	
+                    <div class="col-sm-12 col-xs-12 col-md-12">
+						<div class="row ">Post Details:</div>
+					</div>				
+            </div>   
+            <div class="col-sm-10 col-xs-10 col-md-10" style="margin-bottom: 5px; margin-top: 5px;">
+						<div class="row">	
+							 {% for message in app.session.getFlashBag.get('message') %}
+                             <div class="realertmsg">{{ message }} </div>
+                             {% endfor %}
+                        </div>	
+			</div>         
+            <div class="row postdetailmenu">
+               		<div class="col-sm-8 col-xs-4 col-md-10">
+						<div class="row"><a href="{{path.baseUrlPath}}api/posts/user/{{post.user_id}}"> << BACK </a></div>	
+					</div>
+                    <div class="col-sm-2 col-xs-4 col-md-1 postdetailusernamealign">
+						<div class="row"><a href="{{path.baseUrlPath}}api/updatepost/{{post.rowid}}"><b>Update Post</b> </a></div>	
+					</div>
+                    <div class="col-sm-2 col-xs-4 col-md-1 postdetailusernamealign">
+						<div class="row"><a href="#" id="deletepost" ><b>Delete Post</b> </a></div>	
+					</div>
+            </div>     
+              <div>
+                  <div class="row postdetalis">
+        					 <div class="col-sm-12 col-xs-12 col-md-12 text-left"> 						
+        					       	<div class="row"><b>{{post.title}}</b></div>                            
+        			         </div>	                                         			
+        		  </div>
+                  <div class="row postdetalis">
+        					 <div class="col-sm-12 col-xs-12 col-md-12 text-left"> 						
+        					       	<div class="row">{{post.content}}</div>                            
+        			         </div>			
+        		  </div>
+                  <div class="row postdetalis">
+        					 <div class="col-sm-12 col-xs-12 col-md-12 postdetailusernamealign"> 						
+        					       	<div class="row"><b>{{post.date|date('d M Y')}}</b></div>                            
+        			         </div>			
+        		  </div>
+              </div>          
+          
+          {% include 'footer.html' %}
+	  </div>
+	</div>
+  </body>
+</html>

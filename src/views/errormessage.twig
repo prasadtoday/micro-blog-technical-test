@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'headfiles.html' %}    
+  </head>
+  <body>  
+    <div class="container">	  	
+	  <div id="" class="maindiv">   
+      {% include 'header.html' %} 
+           <div class="row dashboardmain">
+                <div class="col-lg-12 dashboardinner">
+                  {% if(errorcode=='101') %}
+                        <b>Invaid User.</b>                  
+                  {% endif %}
+                  
+                  {% if(errorcode=='102') %}
+                        <b>Invaid Post.</b>                  
+                  {% endif %}
+                  
+                  {% if(errorcode=='103') %}
+                        <b>Post dose not have User.</b>                  
+                  {% endif %}                  
+                  
+                </div>
+          </div>
+       {% include 'footer.html' %}
+	  </div>
+	</div>
+  </body>
+</html>

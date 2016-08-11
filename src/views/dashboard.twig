@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'headfiles.html' %}    
+  </head>
+  <body>  
+    <div class="container">	  	
+	  <div id="" class="maindiv">   
+      {% include 'header.html' %}    
+           
+           <div class="row dashboardmain">
+            <a href="{{path.baseUrlPath}}api/users">
+                <div class="col-lg-6 dashboardinner">
+                  <b>User based Posts</b>
+                </div>
+            </a>
+            <a href="{{path.baseUrlPath}}api/posts">
+                <div class="col-lg-6 dashboardinner">
+                  <b>All Posts</b>
+                </div>
+            </a>
+          </div>
+            
+       {% include 'footer.html' %}
+	  </div>
+	</div>
+  </body>
+</html>

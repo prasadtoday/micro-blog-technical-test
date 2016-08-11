@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'headfiles.html' %}    
+  </head>
+  <body>  
+    <div class="container">	  	
+	  <div id="" class="maindiv">   
+      {% include 'header.html' %}    
+           
+            <div class="row userlistingheading">					
+               		<div class="col-sm-12 col-xs-12 col-md-12">
+						<div class="row">	
+							Users:
+                            </div>	
+                            <div class="row">	
+							  &nbsp;
+                            </div>
+                            	<div class="row">	
+							<a href="{{path.baseUrlPath}}api/dashboard"><< BACK </a>
+                            </div>	
+                            <div class="row">	
+							  &nbsp;
+                            </div> 
+					</div>                    
+            </div>
+            
+          {% if users %}
+            
+  		  <div class="row gridheading">		
+					
+					 <div class="col-sm-1 col-xs-12 col-md-1 text-left" id="top-heading"> 						
+					       	<div class="row">	User ID</div>                            
+			         </div>	
+                     
+                     <div class="col-sm-5 col-xs-12 col-md-5 text-left" id="top-heading"> 						
+					       	<div class="row">	User Name</div>	                            
+			         </div>	
+                     
+                     <div class="col-sm-5 col-xs-12 col-md-5 text-left" id="top-heading"> 						
+					       	<div class="row">	Email</div>	                            
+			         </div>	
+                     
+                     <div class="col-sm-1 col-xs-12 col-md-1 text-left" id="top-heading"> 						
+					       	<div class="row">	View Post(s)</div>	                            
+			         </div>	
+									
+		  </div>
+          
+          {% for user in users %}          
+          <div class="row griddynamicdata">		
+					
+					 <div class="col-sm-1 col-xs-12 col-md-1 text-left" id="top-heading"> 						
+					       	<div class="row">	{{ user.user_id|e }}</div>                            
+			         </div>	
+                     
+                     <div class="col-sm-5 col-xs-12 col-md-5 text-left" id="top-heading"> 						
+					       	<div class="row">	{{ user.name|e }} </div>	                            
+			         </div>	
+                     
+                     <div class="col-sm-5 col-xs-12 col-md-5 text-left" id="top-heading"> 						
+					       	<div class="row"> {{ user.email }} </div>	                            
+			         </div>	
+                     
+                     <div class="col-sm-1 col-xs-12 col-md-1 text-left" id="top-heading"> 						
+					       	<div class="row">	<a href="posts/user/{{ user.user_id }}"> View </a>  </div>	                            
+			         </div>	
+                     
+                    
+		  </div>
+          {% endfor %}
+          
+          {% else %}
+            
+            <div class="row userrecordnotfound">					
+					 <div class="col-sm-12 col-xs-12 col-md-12 text-left" id="top-heading"> 						
+					       	<div class="row">	 Records not found. </div>                            
+			         </div>	
+            </div>
+          {% endif %}
+          
+          {% include 'footer.html' %}
+	  </div>
+	</div>
+  </body>
+</html>

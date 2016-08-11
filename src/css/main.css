@@ -1,0 +1,126 @@
+/* ------- Page Details  --------- 
+Author: Prasad Patil
+Updated Date: 03 Aug 2016
+Purpose: CSS for blog application
+--------- Page Details ---------- */
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 14px;
+}
+.maindiv {
+    align:center; 
+    margin-top: 20px;
+}
+
+.headersection{
+    padding:inherit; background:#e5cbf0; min-height: 60px;
+}
+.footersection{
+    padding:inherit; background:#CFCFCF; min-height: 60px;
+}
+.applicationerror{
+    padding:inherit;margin-top:100px; margin-bottom:100px; text-align: center;
+}
+
+/* DASHBOARD */
+.dashboardmain{
+    padding: 60px; border: 0px solid black;
+}
+
+.dashboardinner{
+    padding:50px; text-align:center; border: 1px solid black;
+}
+
+/* INDEX PAGE CSS */
+.gotoapplication
+{
+    margin-top: 12px; text-align: right; font-size:16px;
+}
+.requirmentheading{
+    margin-top: 12px;
+}
+.platformused{
+    padding:inherit; margin-top: 20px; margin-bottom: 20px; margin-left: 2px; margin-right: 10px;
+}
+
+/* USER(S) PAGE CSS */
+.userlistingheading{
+    padding:inherit; background:#FFFFFF; min-height: 60px; margin:1px; margin-top:20px; font-weight: bold;
+}
+.gridheading{
+    padding:inherit; margin: 1px; margin-bottom:10px;  border: 1; border: black;
+}
+.griddynamicdata{
+    padding:inherit; margin: 1px; margin-bottom: 20px;
+}
+.userrecordnotfound{
+    padding:inherit; margin: 1px; margin-top: 20px; margin-bottom: 20px;
+}
+
+/* POST(S) PAGE CSS*/
+.nameheading{
+    padding:inherit; background:#FFFFFF; min-height: 50px; margin:1px; margin-top:20px;
+}
+.usernameposition{
+    text-align: right;
+}
+.recorddeleted{
+    padding:inherit; background:#FFFFFF; min-height: 40px; margin:1px;
+}
+.realertmsg{
+    color: green;
+    font-weight: bold;
+}
+.dypostrecord{
+    padding:inherit; margin: 1px; margin-bottom:10px;  border: 1px; border: black;
+}
+.postdatealign{
+    text-align: right;
+}
+
+/* POST DETAILS */
+.postdetailheading{
+    padding:inherit; background:#FFFFFF;  margin:1px; margin-top:20px; font-weight: bold;
+}
+.postdetailusernamealign{
+    text-align: right;
+}
+.postdetailmenu{
+    padding:inherit; background:#FFFFFF; min-height: 40px; margin:1px; margin-top:20px;
+}
+.postdetalis{
+    padding:inherit; margin: 1px; margin-bottom:10px;  border: 1; border: black; 
+}
+
+/* ADD/UPDATE POST */
+.addpost{
+    margin-top:20px; margin-left: 20px; margin-right:50px;
+}
+.addpostlable{
+    text-align: center; margin-bottom: 20px;
+}
+.updateposttitle{
+    text-align: center; margin-bottom: 20px;
+}
+
+/* COMMON CSS */
+a:link {
+	color: blue;
+	text-decoration: none;
+    font-weight: bold;
+}
+a:visited {
+	color: blue;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.successmessage{
+    color:green;
+    font-weight: bold;
+}
